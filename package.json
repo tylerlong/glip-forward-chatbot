@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "ringcentral-chatbot": "^1.2.0",
+    "sqlite3": "^4.1.0"
+  },
+  "devDependencies": {
+    "dotenv-override-true": "^6.2.0",
+    "ngrok": "^3.2.5",
+    "standard": "^13.1.0",
+    "yarn-upgrade-all": "^0.5.0"
+  }
+}
