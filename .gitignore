@@ -1,3 +1,6 @@
 node_modules/
 .env
-db.sqlite
+*.sqlite
+.env.yml
+.serverless/
+.secret

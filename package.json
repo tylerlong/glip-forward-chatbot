@@ -2,16 +2,21 @@
   "name": "glip-forward-chatbot",
   "version": "0.1.0",
   "license": "MIT",
+  "scripts": {
+    "dev": "node -r dotenv-override-true/config express.js",
+    "deploy": "sls deploy"
+  },
   "dependencies": {
+    "axios": "^0.19.0",
     "pg": "^7.12.1",
     "ringcentral-chatbot": "^1.2.0",
-    "serverless-http": "^2.1.0",
-    "sqlite3": "^4.1.0"
+    "serverless-http": "^2.1.0"
   },
   "devDependencies": {
     "dotenv-override-true": "^6.2.0",
     "ngrok": "^3.2.5",
     "serverless": "^1.50.0",
+    "sqlite3": "^4.1.0",
     "standard": "^13.1.0",
     "yarn-upgrade-all": "^0.5.0"
   }

@@ -1,3 +1,5 @@
+const createApp = require('ringcentral-chatbot/dist/apps').default
+
 const handle = async event => {
   const { type, text, group, bot } = event
   if (type === 'Message4Bot' && text === 'ping') {
@@ -5,4 +7,6 @@ const handle = async event => {
   }
 }
 
-module.exports = handle
+const app = createApp(handle)
+
+module.exports = app
