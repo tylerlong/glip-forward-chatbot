@@ -1,5 +1,7 @@
 const createApp = require('ringcentral-chatbot/dist/apps').default
 const { Service, Bot } = require('ringcentral-chatbot/dist/models')
+// const axios = require('axios')
+// const FormData = require('form-data')
 
 let messageBodyId = null
 const handle = async event => {
@@ -40,6 +42,10 @@ const handle = async event => {
       return // bot should not talk to itself to avoid dead-loop conversation
     }
 
+    if (message.body.text === null && message.body.attachments === null) {
+      return // not a meaningful message
+    }
+
     const groupId = message.body.groupId
     const services = await Service.findAll({ where: {
       name: 'Forward',
@@ -48,7 +54,20 @@ const handle = async event => {
     } })
     const bot = await Bot.findByPk(botId)
     for (const service of services) {
-      await bot.rc.post('/restapi/v1.0/glip/posts', { groupId: service.data.teamId, text: `![:Person](${userId}) posted in ![:Team](${groupId}):\n\n> ${message.body.text}` })
+      await bot.rc.post(`/restapi/v1.0/glip/chats/${service.data.teamId}/posts`, {
+        text: `![:Person](${userId}) posted in ![:Team](${groupId}):\n${message.body.text === null ? '' : message.body.text}`
+      })
+      for (const attachment of message.body.attachments.filter(a => a.type === 'File')) {
+        await bot.rc.post(`/restapi/v1.0/glip/chats/${service.data.teamId}/posts`, {
+          text: attachment.contentUri
+        })
+        // const r = await axios.get(attachment.contentUri, {
+        //   responseType: 'arraybuffer'
+        // })
+        // const formData = new FormData()
+        // formData.append('file', Buffer.from(r.data, 'binary'))
+        // await bot.rc.post('/restapi/v1.0/glip/files', formData, { params: { groupId: service.data.teamId } })
+      }
     }
   }
 }
