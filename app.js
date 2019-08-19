@@ -9,16 +9,26 @@ const handle = async event => {
     if (text === 'ping') {
       await bot.sendMessage(group.id, { text: 'pong' })
     } else if (text.startsWith('to ![:Team](')) {
-      console.log(text)
       const matches = text.match(/!\[:Team\]\((\d+)\)/)
       if (matches != null) {
         const teamId = matches[1]
-        await Service.create({ name: 'Forward', groupId: group.id, botId: bot.id, data: { teamId } })
+        await Service.create({
+          name: 'Forward',
+          groupId: group.id,
+          botId: bot.id,
+          data: { teamId }
+        })
       }
+    } else if (text === 'clear') {
+      await Service.destroy({
+        where: {
+          name: 'Forward',
+          groupId: group.id,
+          botId: bot.id
+        }
+      })
     }
   } else if (event.type === 'PostAdded') {
-    console.log(event)
-
     const message = event.message
     if (message.body.id === messageBodyId) {
       return // handled above: Message4Bot
