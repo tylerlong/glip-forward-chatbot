@@ -57,7 +57,7 @@ const handle = async event => {
       await bot.rc.post(`/restapi/v1.0/glip/chats/${service.data.teamId}/posts`, {
         text: `![:Person](${userId}) posted in ![:Team](${groupId}):\n${message.body.text === null ? '' : message.body.text}`
       })
-      for (const attachment of message.body.attachments.filter(a => a.type === 'File')) {
+      for (const attachment of (message.body.attachments || []).filter(a => a.type === 'File')) {
         await bot.rc.post(`/restapi/v1.0/glip/chats/${service.data.teamId}/posts`, {
           text: attachment.contentUri
         })
