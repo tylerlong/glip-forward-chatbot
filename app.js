@@ -47,11 +47,13 @@ const handle = async event => {
     }
 
     const groupId = message.body.groupId
-    const services = await Service.findAll({ where: {
-      name: 'Forward',
-      groupId,
-      botId
-    } })
+    const services = await Service.findAll({
+      where: {
+        name: 'Forward',
+        groupId,
+        botId
+      }
+    })
     const bot = await Bot.findByPk(botId)
     for (const service of services) {
       await bot.rc.post(`/restapi/v1.0/glip/chats/${service.data.teamId}/posts`, {
