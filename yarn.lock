@@ -52,10 +52,10 @@
     ramda "^0.26.1"
     semver "^6.1.1"
 
-"@serverless/enterprise-plugin@^1.3.8":
-  version "1.3.8"
-  resolved "https://registry.yarnpkg.com/@serverless/enterprise-plugin/-/enterprise-plugin-1.3.8.tgz#21f4f1d52c438e0c7ddc61de16d858b58319da99"
-  integrity sha512-r2rTxVZZQB4eOcq2Toe89WYY2vHkyPiLWXGCfzmZcxRYe+Triv1/E1c7A6JE4sGIimLKONDVN6OPECmHanYlgQ==
+"@serverless/enterprise-plugin@^1.3.9":
+  version "1.3.9"
+  resolved "https://registry.yarnpkg.com/@serverless/enterprise-plugin/-/enterprise-plugin-1.3.9.tgz#a86d2c907721a79379bbe834afcd1d3332b6bee0"
+  integrity sha512-+Kw5clfHU2cgNpbIBrNsKLjac/bsxb84FJrX6XKKKR07gO59o3fFBhoJ4d2E06UlbGPzQkwLjhpq8ttNRE536A==
   dependencies:
     "@serverless/event-mocks" "^1.1.1"
     "@serverless/platform-sdk" "^2.0.3"
@@ -181,7 +181,7 @@ accepts@~1.3.7:
     mime-types "~2.1.24"
     negotiator "0.6.2"
 
-acorn-jsx@^5.0.0:
+acorn-jsx@^5.0.2:
   version "5.0.2"
   resolved "https://registry.yarnpkg.com/acorn-jsx/-/acorn-jsx-5.0.2.tgz#84b68ea44b373c4f8686023a551f61a21b7c4a4f"
   integrity sha512-tiNTrP1MP0QrChmD2DdupCr6HWSFeKVw5d/dHTu4Y7rkAkRhU/Dt7dphAfIUyxtHpl/eBVip5uTNSpQJHylpAw==
@@ -408,9 +408,9 @@ atob@^2.1.1:
   integrity sha512-Wm6ukoaOGJi/73p/cl2GvLjTI5JM1k/O14isD73YML8StrH/7/lRFgmg8nICZgD3bZZvjwCGxtMOD3wWNAu8cg==
 
 aws-sdk@^2.509.0, aws-sdk@^2.516.0:
-  version "2.516.0"
-  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.516.0.tgz#098c8a8fa2f6c06ad8214f312142ccd10c7ec1ac"
-  integrity sha512-YW14hj0LNrcVF6CmN8zphy3fFbHiUGYDLIiD+1C932vDUvwqwFZzV2zd7Z//XKSFa+dSG4aGyHln2/F3/7BgpQ==
+  version "2.518.0"
+  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.518.0.tgz#a0412cfcb41fd02e18d9e8b20c1dce356160fcc2"
+  integrity sha512-hwtKKf93TFyd3qugDW54ElpkUXhPe+ArPIHadre6IAFjCJiv08L8DaZKLRyclDnKfTavKe+f/PhdSEYo1QUHiA==
   dependencies:
     buffer "4.9.1"
     events "1.1.1"
@@ -1181,9 +1181,9 @@ define-property@^2.0.2:
     isobject "^3.0.1"
 
 deglob@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/deglob/-/deglob-4.0.0.tgz#26df218423dceb0d9001583c0b89b51efbb20059"
-  integrity sha512-nrUWPTcQ4ap7KWCSeWNDXUgIe4A3nSbsp9cmWrxbKOOxUxLpAVzU1aeatYZfjE+lVHO1lUjXpBmoxOgPYbV5lg==
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/deglob/-/deglob-4.0.1.tgz#0685c6383992fd6009be10653a2b1116696fad55"
+  integrity sha512-/g+RDZ7yf2HvoW+E5Cy+K94YhgcFgr6C8LuHZD1O5HoNPkf3KY6RfXJ0DBGlB/NkLi5gml+G9zqRzk9S0mHZCg==
   dependencies:
     find-root "^1.0.0"
     glob "^7.0.5"
@@ -1440,11 +1440,11 @@ eslint-module-utils@^2.4.0:
     pkg-dir "^2.0.0"
 
 eslint-plugin-es@^1.4.0:
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-es/-/eslint-plugin-es-1.4.0.tgz#475f65bb20c993fc10e8c8fe77d1d60068072da6"
-  integrity sha512-XfFmgFdIUDgvaRAlaXUkxrRg5JSADoRC8IkKLc/cISeR3yHVMefFHQZpcyXXEUUPHfy5DwviBcrfqlyqEwlQVw==
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-es/-/eslint-plugin-es-1.4.1.tgz#12acae0f4953e76ba444bfd1b2271081ac620998"
+  integrity sha512-5fa/gR2yR3NxQf+UXkeLeP8FBBl6tSgdrAz1+cF84v1FMM4twGwQoqTnn+QxFLcPOrF4pdKEJKDB/q9GoyJrCA==
   dependencies:
-    eslint-utils "^1.3.0"
+    eslint-utils "^1.4.2"
     regexpp "^2.0.1"
 
 eslint-plugin-import@~2.18.0:
@@ -1509,7 +1509,7 @@ eslint-scope@^5.0.0:
     esrecurse "^4.1.0"
     estraverse "^4.1.1"
 
-eslint-utils@^1.3.0, eslint-utils@^1.3.1:
+eslint-utils@^1.3.1, eslint-utils@^1.4.2:
   version "1.4.2"
   resolved "https://registry.yarnpkg.com/eslint-utils/-/eslint-utils-1.4.2.tgz#166a5180ef6ab7eb462f162fd0e6f2463d7309ab"
   integrity sha512-eAZS2sEUMlIeCjBeubdj45dmBHQwPHWyBcT1VSYB7o9x9WRRqKxyUoiXlRjyAwzN7YEzHJlYg0NmzDRWx6GP4Q==
@@ -1573,12 +1573,12 @@ esniff@^1.1.0:
     es5-ext "^0.10.12"
 
 espree@^6.0.0:
-  version "6.1.0"
-  resolved "https://registry.yarnpkg.com/espree/-/espree-6.1.0.tgz#a1e8aa65bf29a331d70351ed814a80e7534e0884"
-  integrity sha512-boA7CHRLlVWUSg3iL5Kmlt/xT3Q+sXnKoRYYzj1YeM10A76TEJBbotV5pKbnK42hEUIr121zTv+QLRM5LsCPXQ==
+  version "6.1.1"
+  resolved "https://registry.yarnpkg.com/espree/-/espree-6.1.1.tgz#7f80e5f7257fc47db450022d723e356daeb1e5de"
+  integrity sha512-EYbr8XZUhWbYCqQRW0duU5LxzL5bETN6AjKBGy1302qqzPaCH10QbRg3Wvco79Z8x9WbiE8HYB4e75xl6qUYvQ==
   dependencies:
     acorn "^7.0.0"
-    acorn-jsx "^5.0.0"
+    acorn-jsx "^5.0.2"
     eslint-visitor-keys "^1.1.0"
 
 esprima@^4.0.0:
@@ -2001,9 +2001,9 @@ functional-red-black-tree@^1.0.1:
   integrity sha1-GwqzvVU7Kg1jmdKcDj6gslIHgyc=
 
 funding@^1.0.0:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/funding/-/funding-1.0.3.tgz#a4dcc4bbd4f723dfe6c5b25ce47fec1bf305f5e6"
-  integrity sha512-NYD7mh7cXbxFmXxk2BruMA6peWAQFOXuBpNgRjhiTPr8AB1DX0/vNUXHRiuqpYNGq0ow3UDDIrTR6it/mlauyg==
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/funding/-/funding-1.0.8.tgz#99640755b28080debd74a9337d448b8af00f827f"
+  integrity sha512-M4yYVbIgS9jxKY0XS89DDpsiMHe+JiwavRaXCmJxNmhJhVPEi8KigfP6mP69oOWaTDrCfrF4rE36OhGfoHkTTQ==
   dependencies:
     boxen "^3.2.0"
     chalk "^2.4.2"
@@ -3202,9 +3202,9 @@ nan@^2.12.1:
   integrity sha512-INOFj37C7k3AfaNTtX8RhsTw7qRy7eLET14cROi9+5HAVbbHuIWUHEauBv5qT4Av2tWasiTY1Jw6puUNqRJXQg==
 
 nanoid@^2.0.0:
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-2.0.3.tgz#dde999e173bc9d7bd2ee2746b89909ade98e075e"
-  integrity sha512-NbaoqdhIYmY6FXDRB4eYtDVC9Z9eCbn8TyaiC16LNKtpPv/aqa0tOPD8y6gNE4yUNnaZ7LLhYtXOev/6+cBtfw==
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-2.0.4.tgz#4889355c9ce8e24efad7c65945a4a2875ac3e8f4"
+  integrity sha512-sOJnBmY3TJQBVIBqKHoifuwygrocXg3NjS9rZSMnVl05XWSHK7Qxb177AIZQyMDjP86bz+yneozj/h9qsPLcCA==
 
 nanomatch@^1.2.13:
   version "1.2.13"
@@ -4225,10 +4225,10 @@ rimraf@^2.2.8, rimraf@^2.6.1:
   dependencies:
     glob "^7.1.3"
 
-ringcentral-chatbot@^1.2.2:
-  version "1.2.2"
-  resolved "https://registry.yarnpkg.com/ringcentral-chatbot/-/ringcentral-chatbot-1.2.2.tgz#2fee93eaf04eeab9cd02f957c8044efc9dc1cf86"
-  integrity sha512-/jiQlPqLwE1X0C7T8pPxjwxYOHqYBZx88HVo2G2yuVws4a8djRNmbIdV2Y1mYB+nrANCGfU1AZE44T0CQLlLQg==
+ringcentral-chatbot@^1.2.3:
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/ringcentral-chatbot/-/ringcentral-chatbot-1.2.3.tgz#44c33a1d0295fd55905a08026289a2236294e2bd"
+  integrity sha512-tb5/PgySTEofWTQFoLiHYJQRq+o/pSQhSHQFSE176GluYupGIICASD7OZmFc7ZBMxdcwH7cPDztH3IuNIpyIBg==
   dependencies:
     aws-sdk "^2.516.0"
     axios "^0.19.0"
@@ -4402,13 +4402,13 @@ serverless-http@^2.3.0:
   optionalDependencies:
     "@types/aws-lambda" "^8.10.19"
 
-serverless@^1.50.0:
-  version "1.50.0"
-  resolved "https://registry.yarnpkg.com/serverless/-/serverless-1.50.0.tgz#c85cca9fd6abfe2d5545066e84c73b8829a9a4fa"
-  integrity sha512-Bp6f8zWDZli92m2dbVhcs42Ra0PLiZtlLtjFL/i0IYlrmRsLbRG86aHdUgV0vmj6RfEKxPCPE8fZZn7rDtqdZg==
+serverless@^1.50.1:
+  version "1.50.1"
+  resolved "https://registry.yarnpkg.com/serverless/-/serverless-1.50.1.tgz#e09d6d1fdc553ff240bd7bbf378190c50759acb2"
+  integrity sha512-kFUoTrTR05wKXDmyeCPfsC6OKijTa+Wxg8ygucl+zbWuXS7AiEdAPZBqYvOr11uany1sRhTetUhKxB9SfE5+0Q==
   dependencies:
     "@serverless/cli" "^1.0.3"
-    "@serverless/enterprise-plugin" "^1.3.8"
+    "@serverless/enterprise-plugin" "^1.3.9"
     archiver "^1.3.0"
     async "^1.5.2"
     aws-sdk "^2.509.0"
