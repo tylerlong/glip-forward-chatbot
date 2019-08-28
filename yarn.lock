@@ -407,7 +407,7 @@ atob@^2.1.1:
   resolved "https://registry.yarnpkg.com/atob/-/atob-2.1.2.tgz#6d9517eb9e030d2436666651e86bd9f6f13533c9"
   integrity sha512-Wm6ukoaOGJi/73p/cl2GvLjTI5JM1k/O14isD73YML8StrH/7/lRFgmg8nICZgD3bZZvjwCGxtMOD3wWNAu8cg==
 
-aws-sdk@^2.509.0, aws-sdk@^2.516.0:
+aws-sdk@^2.509.0, aws-sdk@^2.518.0:
   version "2.518.0"
   resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.518.0.tgz#a0412cfcb41fd02e18d9e8b20c1dce356160fcc2"
   integrity sha512-hwtKKf93TFyd3qugDW54ElpkUXhPe+ArPIHadre6IAFjCJiv08L8DaZKLRyclDnKfTavKe+f/PhdSEYo1QUHiA==
@@ -471,7 +471,7 @@ base@^0.11.1:
     mixin-deep "^1.2.0"
     pascalcase "^0.1.1"
 
-basic-auth@^2.0.1:
+basic-auth@^2.0.1, basic-auth@~2.0.0:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/basic-auth/-/basic-auth-2.0.1.tgz#b998279bf47ce38344b4f3cf916d4679bbf51e3a"
   integrity sha512-NF+epuEdnUYVlGuhaxbbq+dvJttwLnGY+YixlXlME5KpQ5W3CnXA5cVTneY3SPbPDRkcjMbifrwmFYcClgOZeg==
@@ -3166,6 +3166,17 @@ moment-timezone@^0.5.21:
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.24.0.tgz#0d055d53f5052aa653c9f6eb68bb5d12bf5c2b5b"
   integrity sha512-bV7f+6l2QigeBBZSM/6yTNq4P2fNpSWj/0e7jQcy87A8e7o2nAfP/34/2ky5Vw4B9S446EtIhodAzkFCcR4dQg==
 
+morgan@^1.9.1:
+  version "1.9.1"
+  resolved "https://registry.yarnpkg.com/morgan/-/morgan-1.9.1.tgz#0a8d16734a1d9afbc824b99df87e738e58e2da59"
+  integrity sha512-HQStPIV4y3afTiCYVxirakhlCfGkI161c76kKFca7Fk1JusM//Qeo1ej2XaMniiNeaZklMVrh3vTtIzpzwbpmA==
+  dependencies:
+    basic-auth "~2.0.0"
+    debug "2.6.9"
+    depd "~1.1.2"
+    on-finished "~2.3.0"
+    on-headers "~1.0.1"
+
 ms@2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.0.0.tgz#5608aeadfc00be6c2901df5f9861788de0d597c8"
@@ -3503,6 +3514,11 @@ on-finished@~2.3.0:
   integrity sha1-IPEzZIGwg811M3mSoWlxqi2QaUc=
   dependencies:
     ee-first "1.1.1"
+
+on-headers@~1.0.1:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/on-headers/-/on-headers-1.0.2.tgz#772b0ae6aaa525c399e489adfad90c403eb3c28f"
+  integrity sha512-pZAE+FJLoyITytdqK0U5s+FIpjN0JP3OzFi/u8Rx+EV5/W+JTWGXG8xFzevE7AjBfDqHv/8vL8qQsIhHnqRkrA==
 
 once@^1.3.0, once@^1.3.1, once@^1.4.0:
   version "1.4.0"
@@ -4225,16 +4241,17 @@ rimraf@^2.2.8, rimraf@^2.6.1:
   dependencies:
     glob "^7.1.3"
 
-ringcentral-chatbot@^1.2.3:
-  version "1.2.3"
-  resolved "https://registry.yarnpkg.com/ringcentral-chatbot/-/ringcentral-chatbot-1.2.3.tgz#44c33a1d0295fd55905a08026289a2236294e2bd"
-  integrity sha512-tb5/PgySTEofWTQFoLiHYJQRq+o/pSQhSHQFSE176GluYupGIICASD7OZmFc7ZBMxdcwH7cPDztH3IuNIpyIBg==
+ringcentral-chatbot@^1.2.5:
+  version "1.2.5"
+  resolved "https://registry.yarnpkg.com/ringcentral-chatbot/-/ringcentral-chatbot-1.2.5.tgz#d8e8f30ed90b27a55e19ee8305150e8e1f0a6b28"
+  integrity sha512-f9H7+993nNIIasIZ6fGsAK1d6iu0jy3SXu0IxxNoYHiDitb/nPmfsyUvDQ9IvxVd0x2nQhKkLhUUvlN1gKKyQA==
   dependencies:
-    aws-sdk "^2.516.0"
+    aws-sdk "^2.518.0"
     axios "^0.19.0"
     express "^4.17.1"
     express-basic-auth "^1.2.0"
     form-data "^2.5.0"
+    morgan "^1.9.1"
     ringcentral-js-concise "^0.7.7"
     sequelize "^5.16.0"
     supertest "^4.0.2"
@@ -4365,9 +4382,9 @@ sequelize-pool@^2.3.0:
   integrity sha512-Ibz08vnXvkZ8LJTiUOxRcj1Ckdn7qafNZ2t59jYHMX1VIebTAOYefWdRYFt6z6+hy52WGthAHAoLc9hvk3onqA==
 
 sequelize@^5.16.0:
-  version "5.16.0"
-  resolved "https://registry.yarnpkg.com/sequelize/-/sequelize-5.16.0.tgz#6626f82cc41cdf02a5758f73783566e369d05cd8"
-  integrity sha512-1b2PNgxV3+HtaOCJ9gos4qQzvd8QEc5jz77MUxZg8+nqX4haSZWI7Rn0XzW1lPIRseKUXVHanyh/gqztsfJN+g==
+  version "5.17.0"
+  resolved "https://registry.yarnpkg.com/sequelize/-/sequelize-5.17.0.tgz#dd939381d68ddb77e6651607be8051b60bad01fc"
+  integrity sha512-M5/6ek+9YpUAEImqrIMlguEIE22Cf6rX35P/72S1q3nwYhDxb96shM5iHjk7+A3tZEFiNHKf//cbIMwNaljNbA==
   dependencies:
     bluebird "^3.5.0"
     cls-bluebird "^2.1.0"
