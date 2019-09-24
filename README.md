@@ -6,7 +6,7 @@
 1. Add the bot to destination team
 1. Add the bot to source team
 1. In source team, send command `@forward to @destination-team`
-1. If you want to cancel forwarding, just `@forward clear`
+1. If you want to cancel forwarding, send command `@forward clear`
 
 
 ## Reference
