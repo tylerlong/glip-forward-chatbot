@@ -9,6 +9,11 @@
 1. If you want to cancel forwarding, send command `@forward clear`
 
 
+## Pay attention!
+
+Do NOT create circular forwarding!
+
+
 ## Reference
 
 - [Tutorial for Ping chatbot - express version](https://github.com/tylerlong/glip-ping-chatbot/tree/express)
