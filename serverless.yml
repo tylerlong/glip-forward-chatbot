@@ -25,7 +25,7 @@ provider:
     Team: dre
     Owner: Tyler Liu
     Environment: temp
-    Name: dre-glip-forward-chatbots
+    Name: dre-glip-forward-chatbot
 
 package:
   exclude:
