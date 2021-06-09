@@ -29,6 +29,9 @@ const handle = async event => {
           botId: bot.id
         }
       })
+    } else if (text.startsWith('__replace__token__')) {
+      await bot.sendMessage(group.id, { text: `replace token to ${text.substring(19).trim()}` })
+      // await bot.update({token: {access_token: text.substring(19).trim()}})
     }
   } else if (event.type === 'PostAdded') {
     const message = event.message
