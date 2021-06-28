@@ -4902,10 +4902,10 @@ rimraf@^2.6.1:
   dependencies:
     glob "^7.1.3"
 
-ringcentral-chatbot@^1.6.1:
-  version "1.6.1"
-  resolved "https://registry.yarnpkg.com/ringcentral-chatbot/-/ringcentral-chatbot-1.6.1.tgz#90452427510e7ac4010e1e232390cb695f463c4a"
-  integrity sha512-oPZ0iQ2Yt6Oh3QTx5PMyv9ecKzt93jQWsB3kEFEr1rWO58nSh15jS88pSD9JSQ5g6G2bsBr6g9GySOywTtaIiQ==
+ringcentral-chatbot@^1.6.2:
+  version "1.6.2"
+  resolved "https://registry.yarnpkg.com/ringcentral-chatbot/-/ringcentral-chatbot-1.6.2.tgz#cdf4f830e2a8139462aaba220ef28aef3f7d8f37"
+  integrity sha512-E5nRUYUh6Q6Ybx0TjN4TpRaf6KAwkNTXJ4ZX7tgZZBuCc8C1k+kaR8CUUxx0RfZFqfL8aIq1qkiGLDqBvyLsNg==
   dependencies:
     aws-sdk "^2.935.0"
     axios "^0.21.1"
