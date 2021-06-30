@@ -5191,10 +5191,10 @@ rimraf@^3.0.2:
   dependencies:
     glob "^7.1.3"
 
-ringcentral-chatbot@^1.7.5:
-  version "1.7.5"
-  resolved "https://registry.yarnpkg.com/ringcentral-chatbot/-/ringcentral-chatbot-1.7.5.tgz#59d094538cf35ba35b838171c805d2b93eb8a457"
-  integrity sha512-+QOzZ4uLgxG4Enxh+4UZNtgUqzmF8GuKJR4pR1d/jxMhXf6lqsxKn642+oKhfYWYEiezvaTUlYLWuLgJhS/Jrg==
+ringcentral-chatbot@^1.7.6:
+  version "1.7.6"
+  resolved "https://registry.yarnpkg.com/ringcentral-chatbot/-/ringcentral-chatbot-1.7.6.tgz#f2c987d131ac79b6d59e938d6f5b0ee0738b29b7"
+  integrity sha512-yyTUtWPeAa5DAixocsbbMTFpsVE53tAANQVQngobl1UZl7TLbn+a/cPeYAolFjDsKJvkvvx2IaLH1TwJ4eFvuw==
   dependencies:
     "@rc-ex/core" "^0.8.3"
     "@types/express" "^4.17.12"
