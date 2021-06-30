@@ -3,7 +3,7 @@ service: glip-forward-chatbot
 provider:
   stage: prod
   name: aws
-  runtime: nodejs14.x
+  runtime: nodejs10.x
   region: us-east-1
   memorySize: 256
   timeout: 30 # maximum value allowed by api gateway
@@ -31,23 +31,25 @@ provider:
 package:
   exclude:
     - ./**
-    - '!dist/lambda.js'
-    - '!dist/app.js'
+    - '!lambda.js'
+    - '!lambda.js.map'
+    - '!app.js'
+    - '!app.js.map'
     - '!node_modules/**'
   excludeDevDependencies: true
 
 functions:
   app:
-    handler: dist/lambda.app
+    handler: lambda.app
     timeout: 300 # this value is not allowed by api gateway but we have proxy below to workaround it
     events:
       - http: 'GET /admin/diagnostic'
   proxy:
-    handler: dist/lambda.proxy
+    handler: lambda.proxy
     events:
       - http: 'ANY {proxy+}'
   maintain:
-    handler: dist/lambda.maintain
+    handler: lambda.maintain
     events:
       - schedule: rate(1 day)
 

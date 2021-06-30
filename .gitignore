@@ -4,5 +4,8 @@ node_modules/
 .env.yml
 .serverless/
 .secret
-dist/
 backup.txt
+*.js
+*.js.map
+*.d.ts
+.DS_Store
