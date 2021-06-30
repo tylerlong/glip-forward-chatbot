@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {
-    "dev": "ts-node -r dotenv-override-true/config express.ts",
+    "dev": "ts-node -r dotenv-override-true/config src/express.ts",
     "deploy": "tsc && sls deploy"
   },
   "dependencies": {

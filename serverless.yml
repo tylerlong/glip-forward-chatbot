@@ -31,23 +31,23 @@ provider:
 package:
   exclude:
     - ./**
-    - '!lambda.js'
-    - '!app.js'
+    - '!dist/lambda.js'
+    - '!dist/app.js'
     - '!node_modules/**'
   excludeDevDependencies: true
 
 functions:
   app:
-    handler: lambda.app
+    handler: dist/lambda.app
     timeout: 300 # this value is not allowed by api gateway but we have proxy below to workaround it
     events:
       - http: 'GET /admin/diagnostic'
   proxy:
-    handler: lambda.proxy
+    handler: dist/lambda.proxy
     events:
       - http: 'ANY {proxy+}'
   maintain:
-    handler: lambda.maintain
+    handler: dist/lambda.maintain
     events:
       - schedule: rate(1 day)
 
