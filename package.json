@@ -9,7 +9,7 @@
   "dependencies": {
     "axios": "^0.21.1",
     "pg": "^8.6.0",
-    "ringcentral-chatbot": "^1.7.6",
+    "ringcentral-chatbot": "^1.7.7",
     "serverless-http": "^2.7.0"
   },
   "devDependencies": {
