@@ -4,3 +4,6 @@ node_modules/
 .env.yml
 .serverless/
 .secret
+*.js
+*.map
+*.d.ts
