@@ -7,9 +7,9 @@
     "deploy": "tsc && sls deploy"
   },
   "dependencies": {
-    "ringcentral-chatbot": "^1.7.7",
     "axios": "^0.19.0",
     "pg": "^7.14.0",
+    "ringcentral-chatbot": "^1.8.5",
     "serverless-http": "^2.3.0"
   },
   "devDependencies": {
