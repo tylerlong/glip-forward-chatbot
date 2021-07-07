@@ -43,7 +43,8 @@ functions:
     handler: lambda.app
     timeout: 300 # this value is not allowed by api gateway but we have proxy below to workaround it
     events:
-      - http: 'GET /admin/diagnostic'
+      - http: 'GET /admin/dump-database'
+      - http: 'GET /admin/list-subscriptions'
   proxy:
     handler: lambda.proxy
     events:
